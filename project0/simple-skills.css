@@ -1,0 +1,163 @@
+
+    .skills {
+      height: 950px;
+      position: relative;
+      margin: 0;
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    
+    .lines {
+      height: 90%;
+      position: relative;
+      list-style: none;
+      margin:0;
+      padding:0;
+    }
+    
+    .line {
+      height: inherit;
+      border-right: 1px solid white;
+      position: absolute;
+      margin:0;
+      padding:0;
+      
+    }
+    
+    .line:first-child{
+        border-right:none;
+    }
+    .line.line:nth-child(2){
+      border-right: none;
+    }
+
+    .line.l---10 {
+        left: 0;
+      }
+      .line.l--0 {
+        left: 10%;
+      }
+      .line.l--20 {
+        left: 28%;
+      }
+      .line.l--40 {
+        left: 46%;
+      }
+      .line.l--60 {
+        left: 64%;
+      }
+      .line.l--80 {
+        left: 82%;
+      }
+      .line.l--100 {
+        left: calc(100% - 1px);
+      }
+    
+    .line__label {
+      display: block;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      bottom: -30px;
+      right: -50px;
+      text-align: center;
+    }
+    .lines .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        display: block;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      bottom: -30px;
+      }
+    
+    
+    .charts {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    
+    .chart__title {
+      display: block;
+      margin: 10px 0 5px 0;
+      font-weight: bold;
+      font-size: 16px;
+      opacity: 0;
+      text-transform: uppercase;
+      animation: 1s anim-lightspeed-in ease forwards;
+    }
+      .chart--prod .chart__title {
+        animation-delay: 0.5s;
+      }
+      .chart--design .chart__title {
+        animation-delay: 1s;
+      }
+    
+    
+    .chart--horiz {
+      list-style: none;
+      margin-left: 54px;
+    }
+    
+    .chart__bar {
+      height: 30px;
+      margin-bottom: 10px;
+      background: linear-gradient(to left, #A3C1F3, #BCB0E7);
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      opacity: 0;
+      animation: 1s anim-lightspeed-in ease forwards;
+    }
+
+    .line__label .tooltip {
+      display: block;
+      width: 100px;
+      height: 30px;
+      top:-24px;
+      position: relative;
+    }
+    span .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 3;
+      bottom: 110%;
+      left: 50%;
+      margin-left: -60px;
+    }
+    
+    span .tooltiptext:hover {
+      visibility: visible;
+    }
+    
+    
+    .chart__label {
+      padding-left: 10px;
+      line-height: 30px;
+      color: white;
+    }
+    
+    
+    @keyframes anim-lightspeed-in {
+      0% {
+        transform: translateX(-200%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    
